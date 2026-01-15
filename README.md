@@ -13,6 +13,17 @@ MCP servers and skills for Oracle philosophy.
 /plugin install ralph-local@soul-brews-studio-mcp
 ```
 
+## Uninstall
+
+```bash
+# Remove plugins
+/plugin uninstall oracle-skills@soul-brews-studio-mcp
+/plugin uninstall ralph-local@soul-brews-studio-mcp
+
+# Remove marketplace (optional)
+/plugin marketplace remove soul-brews-studio-mcp
+```
+
 ## Plugins
 
 ### oracle-skills
