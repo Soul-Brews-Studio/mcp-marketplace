@@ -5,7 +5,7 @@ on:
     paths:
       - '.claude-plugin/marketplace.json'
       - 'oracle-skills/.claude-plugin/plugin.json'
-      - 'ralph-local/.claude-plugin/plugin.json'
+      - 'ralph-soulbrews/.claude-plugin/plugin.json'
     branches:
       - main
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
         run: |
           MARKETPLACE_VERSION=$(jq -r '.version' .claude-plugin/marketplace.json)
           ORACLE_VERSION=$(jq -r '.version' oracle-skills/.claude-plugin/plugin.json)
-          RALPH_VERSION=$(jq -r '.version' ralph-local/.claude-plugin/plugin.json)
+          RALPH_VERSION=$(jq -r '.version' ralph-soulbrews/.claude-plugin/plugin.json)
           DATE=$(date '+%Y-%m-%d')
           
           echo "marketplace=$MARKETPLACE_VERSION" >> $GITHUB_OUTPUT
