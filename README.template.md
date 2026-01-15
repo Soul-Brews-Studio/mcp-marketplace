@@ -2,14 +2,14 @@
 
 MCP servers and skills for Oracle philosophy.
 
-> **Version**: 1.0.1 | **Updated**: 2026-01-15
+> **Version**: {{MARKETPLACE_VERSION}} | **Updated**: {{DATE}}
 
 ## Plugins
 
 | Plugin | Version | Description |
 |--------|---------|-------------|
-| oracle-skills | 1.0.3 | 13 Oracle skills |
-| ralph-local | 1.0.0 | Self-referential AI loops |
+| oracle-skills | {{ORACLE_VERSION}} | 13 Oracle skills |
+| ralph-local | {{RALPH_VERSION}} | Self-referential AI loops |
 
 ## Installation
 
@@ -33,7 +33,7 @@ MCP servers and skills for Oracle philosophy.
 /plugin marketplace remove soul-brews-studio-mcp
 ```
 
-## oracle-skills (v1.0.3)
+## oracle-skills (v{{ORACLE_VERSION}})
 
 13 essential Claude Code skills:
 
@@ -53,7 +53,7 @@ MCP servers and skills for Oracle philosophy.
 | `/schedule` | Calendar/schedule queries |
 | `/context-finder` | Fast search through codebase |
 
-## ralph-local (v1.0.0)
+## ralph-local (v{{RALPH_VERSION}})
 
 Self-referential AI loops (fork of Anthropic's ralph-wiggum):
 
@@ -73,7 +73,7 @@ See [Oracle Philosophy](oracle-skills/docs/philosophy/ORACLE-PHILOSOPHY.md)
 
 | Date | Version | Changes |
 |------|---------|---------|
-| 2026-01-15 | 1.0.1 | Current release |
+| {{DATE}} | {{MARKETPLACE_VERSION}} | Current release |
 
 ## License
 
