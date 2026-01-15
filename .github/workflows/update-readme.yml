@@ -26,16 +26,18 @@ jobs:
           ORACLE_VERSION=$(jq -r '.version' oracle-skills/.claude-plugin/marketplace.json)
           RALPH_VERSION=$(jq -r '.version' ralph-soulbrews/.claude-plugin/plugin.json)
           DATE=$(date '+%Y-%m-%d')
-          
+          TIME=$(date '+%H:%M UTC')
+
           echo "marketplace=$MARKETPLACE_VERSION" >> $GITHUB_OUTPUT
           echo "oracle=$ORACLE_VERSION" >> $GITHUB_OUTPUT
           echo "ralph=$RALPH_VERSION" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
-          
+          echo "time=$TIME" >> $GITHUB_OUTPUT
+
           echo "Marketplace: $MARKETPLACE_VERSION"
           echo "Oracle Skills: $ORACLE_VERSION"
-          echo "Ralph Local: $RALPH_VERSION"
-          echo "Date: $DATE"
+          echo "Ralph: $RALPH_VERSION"
+          echo "Date: $DATE $TIME"
       
       - name: Update README from template
         run: |
@@ -43,6 +45,7 @@ jobs:
               -e "s/{{ORACLE_VERSION}}/${{ steps.versions.outputs.oracle }}/g" \
               -e "s/{{RALPH_VERSION}}/${{ steps.versions.outputs.ralph }}/g" \
               -e "s/{{DATE}}/${{ steps.versions.outputs.date }}/g" \
+              -e "s/{{TIME}}/${{ steps.versions.outputs.time }}/g" \
               README.template.md > README.md
       
       - name: Commit changes

@@ -1,36 +1,36 @@
-# Soul Brews MCP Marketplace
+# Soul Brews Plugin Marketplace
 
-MCP servers and skills for Oracle philosophy.
+Claude Code plugins and skills for Oracle philosophy.
 
-> **Version**: {{MARKETPLACE_VERSION}} | **Updated**: {{DATE}}
+> **Version**: {{MARKETPLACE_VERSION}} | **Updated**: {{DATE}} {{TIME}}
 
 ## Plugins
 
-| Plugin | Version | Description |
-|--------|---------|-------------|
-| oracle-skills | {{ORACLE_VERSION}} | 13 Oracle skills |
-| ralph-soulbrews | {{RALPH_VERSION}} | Self-referential AI loops |
+| Plugin | Version | Updated | Description |
+|--------|---------|---------|-------------|
+| oracle-skills | {{ORACLE_VERSION}} | {{DATE}} | 13 Oracle skills |
+| ralph-soulbrews | {{RALPH_VERSION}} | {{DATE}} | Self-referential AI loops |
 
 ## Installation
 
 ```bash
 # Add marketplace (once)
-/plugin marketplace add Soul-Brews-Studio/mcp-marketplace
+claude plugin marketplace add Soul-Brews-Studio/plugin-marketplace
 
 # Install plugins
-/plugin install oracle-skills@soul-brews-studio-mcp
-/plugin install ralph-soulbrews@soul-brews-studio-mcp
+claude plugin install oracle-skills@soul-brews-plugin
+claude plugin install ralph-soulbrews@soul-brews-plugin
 ```
 
 ## Uninstall
 
 ```bash
 # Remove plugins
-/plugin uninstall oracle-skills@soul-brews-studio-mcp
-/plugin uninstall ralph-soulbrews@soul-brews-studio-mcp
+claude plugin uninstall oracle-skills@soul-brews-plugin
+claude plugin uninstall ralph-soulbrews@soul-brews-plugin
 
 # Remove marketplace (optional)
-/plugin marketplace remove soul-brews-studio-mcp
+claude plugin marketplace remove soul-brews-plugin
 ```
 
 ## oracle-skills (v{{ORACLE_VERSION}})
