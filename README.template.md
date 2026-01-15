@@ -13,24 +13,25 @@ Claude Code plugins and skills for Oracle philosophy.
 
 ## Installation
 
-```bash
+Inside Claude Code:
+```
 # Add marketplace (once)
-claude plugin marketplace add Soul-Brews-Studio/plugin-marketplace
+/plugin marketplace add Soul-Brews-Studio/plugin-marketplace
 
 # Install plugins
-claude plugin install oracle-skills@soul-brews-plugin
-claude plugin install ralph-soulbrews@soul-brews-plugin
+/plugin install oracle-skills@soul-brews-plugin
+/plugin install ralph-soulbrews@soul-brews-plugin
 ```
 
 ## Uninstall
 
-```bash
+```
 # Remove plugins
-claude plugin uninstall oracle-skills@soul-brews-plugin
-claude plugin uninstall ralph-soulbrews@soul-brews-plugin
+/plugin uninstall oracle-skills@soul-brews-plugin
+/plugin uninstall ralph-soulbrews@soul-brews-plugin
 
 # Remove marketplace (optional)
-claude plugin marketplace remove soul-brews-plugin
+/plugin marketplace remove soul-brews-plugin
 ```
 
 ## oracle-skills (v{{ORACLE_VERSION}})
