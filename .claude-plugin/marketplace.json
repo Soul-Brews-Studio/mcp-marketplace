@@ -1,6 +1,6 @@
 {
   "name": "soul-brews-studio-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "owner": { "name": "Soul Brews Studio" },
   "metadata": {
     "description": "MCP servers and skills for Oracle philosophy"
@@ -12,8 +12,8 @@
       "description": "13 Oracle skills: trace, rrr, recap, feel, fyi, forward, learn, project, standup, watch, where-we-are, schedule, context-finder"
     },
     {
-      "name": "ralph-local",
-      "source": "./ralph-local",
+      "name": "ralph-soulbrews",
+      "source": "./ralph-soulbrews",
       "description": "Self-referential AI loops (fork of Anthropic's ralph-wiggum)"
     }
   ]

@@ -9,7 +9,7 @@ MCP servers and skills for Oracle philosophy.
 | Plugin | Version | Description |
 |--------|---------|-------------|
 | oracle-skills | {{ORACLE_VERSION}} | 13 Oracle skills |
-| ralph-local | {{RALPH_VERSION}} | Self-referential AI loops |
+| ralph-soulbrews | {{RALPH_VERSION}} | Self-referential AI loops |
 
 ## Installation
 
@@ -19,7 +19,7 @@ MCP servers and skills for Oracle philosophy.
 
 # Install plugins
 /plugin install oracle-skills@soul-brews-studio-mcp
-/plugin install ralph-local@soul-brews-studio-mcp
+/plugin install ralph-soulbrews@soul-brews-studio-mcp
 ```
 
 ## Uninstall
@@ -27,7 +27,7 @@ MCP servers and skills for Oracle philosophy.
 ```bash
 # Remove plugins
 /plugin uninstall oracle-skills@soul-brews-studio-mcp
-/plugin uninstall ralph-local@soul-brews-studio-mcp
+/plugin uninstall ralph-soulbrews@soul-brews-studio-mcp
 
 # Remove marketplace (optional)
 /plugin marketplace remove soul-brews-studio-mcp
@@ -53,7 +53,7 @@ MCP servers and skills for Oracle philosophy.
 | `/schedule` | Calendar/schedule queries |
 | `/context-finder` | Fast search through codebase |
 
-## ralph-local (v{{RALPH_VERSION}})
+## ralph-soulbrews (v{{RALPH_VERSION}})
 
 Self-referential AI loops (fork of Anthropic's ralph-wiggum):
 
