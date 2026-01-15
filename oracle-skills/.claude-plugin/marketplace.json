@@ -1,6 +1,6 @@
 {
   "name": "oracle-skills",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "owner": {
     "name": "Soul Brews Studio"
   },
@@ -12,6 +12,7 @@
       "name": "oracle-skills",
       "source": "./",
       "description": "13 essential Claude Code skills",
+      "strict": false,
       "skills": [
         "./skills/trace",
         "./skills/recap",
