@@ -1,6 +1,6 @@
 {
   "name": "soul-brews-studio-mcp",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "owner": { "name": "Soul Brews Studio" },
   "metadata": {
     "description": "MCP servers and skills for Oracle philosophy"
@@ -9,7 +9,23 @@
     {
       "name": "oracle-skills",
       "source": "./oracle-skills",
-      "description": "13 Oracle skills: trace, rrr, recap, feel, fyi, forward, learn, project, standup, watch, where-we-are, schedule, context-finder"
+      "description": "13 Oracle skills for Claude Code workflows",
+      "strict": false,
+      "skills": [
+        "./oracle-skills/skills/trace",
+        "./oracle-skills/skills/recap",
+        "./oracle-skills/skills/rrr",
+        "./oracle-skills/skills/learn",
+        "./oracle-skills/skills/project",
+        "./oracle-skills/skills/where-we-are",
+        "./oracle-skills/skills/forward",
+        "./oracle-skills/skills/context-finder",
+        "./oracle-skills/skills/feel",
+        "./oracle-skills/skills/fyi",
+        "./oracle-skills/skills/standup",
+        "./oracle-skills/skills/schedule",
+        "./oracle-skills/skills/watch"
+      ]
     },
     {
       "name": "ralph-soulbrews",
