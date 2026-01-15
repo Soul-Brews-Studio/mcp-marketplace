@@ -25,12 +25,13 @@ date "+🕐 %H:%M (%A %d %B %Y)"
 
 ### If URL (http* or owner/repo format)
 
-**First clone via /project learn script:**
+**Clone using ghq directly:**
 ```bash
-bash .claude/skills/project/scripts/learn.sh "$INPUT"
+# Clone to ψ/learn/repo/ using ghq
+GHQ_ROOT="ψ/learn/repo" ghq get "$INPUT"
 ```
 
-This uses ghq to clone, creates symlink in ψ/learn/repo/github.com/owner/name
+This uses ghq to clone to ψ/learn/repo/github.com/owner/name
 
 ### Then resolve path:
 ```bash
