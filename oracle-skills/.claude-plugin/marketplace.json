@@ -1,0 +1,32 @@
+{
+  "name": "oracle-skills",
+  "version": "1.0.2",
+  "owner": {
+    "name": "Soul Brews Studio"
+  },
+  "metadata": {
+    "description": "The 13 skills that survived The Great Archive Migration"
+  },
+  "plugins": [
+    {
+      "name": "oracle-skills",
+      "source": "./",
+      "description": "13 essential Claude Code skills",
+      "skills": [
+        "./skills/trace",
+        "./skills/recap",
+        "./skills/rrr",
+        "./skills/learn",
+        "./skills/project",
+        "./skills/where-we-are",
+        "./skills/forward",
+        "./skills/context-finder",
+        "./skills/feel",
+        "./skills/fyi",
+        "./skills/standup",
+        "./skills/schedule",
+        "./skills/watch"
+      ]
+    }
+  ]
+}
