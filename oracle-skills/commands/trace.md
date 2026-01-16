@@ -17,6 +17,8 @@ Find + Log + Dig + Distill
 /trace list                 # Show past traces logged to Oracle
 /trace dig [id]             # Explore dig points from a trace
 /trace distill [id]         # Extract awakening → learning
+/trace report [query]       # Generate timeline report from all traces
+/trace status               # Show ongoing traces (seeking vs found)
 ```
 
 ## Step 0: Timestamp
@@ -115,6 +117,99 @@ Call `oracle_trace_list({ limit: 10 })` and display:
 1. Get trace chain
 2. Ask for awakening insight
 3. Promote to learning via `oracle_learn()`
+
+---
+## Mode 7: report [query] (Timeline Report)
+
+```
+/trace report skills
+```
+
+Generate comprehensive report from all traces matching query:
+
+**Step 1**: Get all related traces
+```
+oracle_trace_list({ query: "[query]", limit: 20 })
+```
+
+**Step 2**: Build timeline table
+```markdown
+### Timeline (N attempts)
+| # | Time | Mode | Results |
+|---|------|------|---------|
+| 1 | 08:39 | oracle | 10 results |
+| 2 | 08:40 | oracle | 10 results (repeat = seeking) |
+| 3 | 08:42 | deep | 60 files, 20 commits |
+```
+
+**Step 3**: Determine status
+- 1 trace → `🔍 Exploring`
+- 2+ traces same query → `🔄 Still Seeking`
+- --deep with 50+ results → `✅ FOUND`
+
+**Step 4**: Generate report
+```markdown
+## 🔍 Trace Report: [query]
+
+### Status: [FOUND/SEEKING]
+
+### Timeline
+[table from step 2]
+
+### Summary
+[Key findings aggregated]
+
+### Trace Chain
+[all trace IDs linked]
+
+### Next Action
+- If FOUND → `oracle_learn()` to promote
+- If SEEKING → Suggest `--deep` or refine query
+```
+
+---
+## Mode 8: status (Ongoing Traces)
+
+```
+/trace status
+```
+
+Show traces grouped by status:
+
+**Step 1**: Get recent traces
+```
+oracle_trace_list({ limit: 50 })
+```
+
+**Step 2**: Group by query and detect status
+```markdown
+### 🔍 Exploring (1 trace)
+| Query | Last Trace | Results |
+|-------|------------|---------|
+
+### 🔄 Still Seeking (2+ traces, no deep)
+| Query | Attempts | Last |
+|-------|----------|------|
+
+### ✅ Found (deep trace with results)
+| Query | Trace IDs | Promoted? |
+|-------|-----------|-----------|
+```
+
+**Step 3**: Suggest actions
+- Seeking 3+ times → "Try --deep"
+- Found but not promoted → "Run /trace distill [id]"
+
+---
+## Smart Detection (Auto-Suggest)
+
+When tracing, detect patterns and suggest:
+
+| Pattern | Detection | Suggestion |
+|---------|-----------|------------|
+| Same query 3+ times | Count traces with same query | "Still seeking? Try `--deep`" |
+| --deep with 50+ results | Check foundFiles count | "FOUND! Run `/trace report [query]`" |
+| Found but not learned | Trace exists, no linked learning | "Promote with `oracle_learn()`" |
 
 ---
 ## Special Keywords
