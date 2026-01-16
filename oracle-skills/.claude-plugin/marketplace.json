@@ -1,17 +1,17 @@
 {
   "name": "oracle-skills",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "owner": {
     "name": "Soul Brews Studio"
   },
   "metadata": {
-    "description": "The 13 skills that survived The Great Archive Migration"
+    "description": "14 Oracle skills with philosophy built in"
   },
   "plugins": [
     {
       "name": "oracle-skills",
       "source": "./",
-      "description": "13 essential Claude Code skills",
+      "description": "14 essential Claude Code skills",
       "strict": false,
       "skills": [
         "./skills/trace",
@@ -26,7 +26,8 @@
         "./skills/fyi",
         "./skills/standup",
         "./skills/schedule",
-        "./skills/watch"
+        "./skills/watch",
+        "./skills/skill-creator"
       ]
     }
   ]
