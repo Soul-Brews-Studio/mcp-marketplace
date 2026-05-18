@@ -1,0 +1,25 @@
+{
+  "name": "novus-tools",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Novus Fleet (Nexus_Of_Novus)"
+  },
+  "metadata": {
+    "description": "5 practical Claude Code skills from the Novus Fleet — token compression, video extraction, vault search, image generation, and multi-source transcription"
+  },
+  "plugins": [
+    {
+      "name": "novus-tools",
+      "source": "./",
+      "description": "5 productivity skills for Claude Code",
+      "strict": false,
+      "skills": [
+        "./skills/pordee",
+        "./skills/video",
+        "./skills/vsearch",
+        "./skills/genpic",
+        "./skills/transcribe"
+      ]
+    }
+  ]
+}

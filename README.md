@@ -10,6 +10,7 @@ Claude Code plugins and skills for Oracle philosophy.
 |--------|---------|---------|-------------|
 | oracle-skills | 1.5.0 | 2026-01-16 02:11 UTC | 13 Oracle skills |
 | ralph-soulbrews | 1.0.0 | 2026-01-16 02:11 UTC | Self-referential AI loops |
+| novus-tools | 1.0.0 | 2026-05-18 | 5 productivity skills from Novus Fleet |
 
 ## Installation
 
@@ -21,6 +22,7 @@ Inside Claude Code:
 # Install plugins
 /plugin install oracle-skills@soul-brews-plugin
 /plugin install ralph-soulbrews@soul-brews-plugin
+/plugin install novus-tools@soul-brews-plugin
 ```
 
 ## Uninstall
@@ -29,6 +31,7 @@ Inside Claude Code:
 # Remove plugins
 /plugin uninstall oracle-skills@soul-brews-plugin
 /plugin uninstall ralph-soulbrews@soul-brews-plugin
+/plugin uninstall novus-tools@soul-brews-plugin
 
 # Remove marketplace (optional)
 /plugin marketplace remove soul-brews-plugin
@@ -63,6 +66,18 @@ Self-referential AI loops (fork of Anthropic's ralph-wiggum):
 | `/ralph-loop` | Start iterative development loop |
 | `/cancel-ralph` | Cancel active loop |
 | `/check-updates` | Check for upstream updates |
+
+## novus-tools (v1.0.0)
+
+5 productivity skills from the Novus Fleet:
+
+| Skill | Purpose |
+|-------|---------|
+| `/pordee` | Token-compressed communication (60-75% savings) |
+| `/video` | Video frame extraction + AI vision analysis |
+| `/vsearch` | Hybrid BM25 + TF-IDF local markdown search |
+| `/genpic` | Free AI image generation via Google Flow |
+| `/transcribe` | Multi-source transcription (YouTube, video, audio, image) |
 
 ## Philosophy
 
